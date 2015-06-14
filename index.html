@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<h1 class="text-center">Poll validation 1.0</h1>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">Result</div>
+				<div class="panel-body">
+					<form action="#"  class="form-horizontal">
+						<div class="form-group">
+							<label for="poll-1" class="col-md-2">Poll 1</label>
+							<div class="col-md-10">
+								<input type="text" id="poll-1" class="form-control poll" data-poll="1" data-next="2">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="poll-2" class="col-md-2">Poll 2</label>
+							<div class="col-md-10">
+								<input type="text" id="poll-2" class="form-control poll" data-poll="2" data-next="3">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="poll-3" class="col-md-2">Poll 3</label>
+							<div class="col-md-10">
+								<select class="form-control poll" data-poll="3" data-next="4">
+									<option value="demo">demo</option>
+									<option value="demo">demo</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="poll-4" class="col-md-2">Poll 4</label>
+							<div class="col-md-10">
+								<div class="radio">
+								  <label>
+								    <input type="radio" value="" name="radio" class="poll" data-poll="4" data-next="3">
+								    Option one is this and that&mdash;be sure to include why it's great
+								  </label>
+								</div>
+								<div class="radio">
+								  <label>
+								    <input type="radio" value="" name="radio" class="poll" data-poll="4" data-next="2">
+								    Option one is this and that&mdash;be sure to include why it's great
+								  </label>
+								</div>
+								<div class="radio">
+								  <label>
+								    <input type="radio" value="" name="radio" class="poll" data-poll="4" data-child="true">
+								    Option one is this and that&mdash;be
+										<input type="text" class="form-control poll" data-children="4" data-next="5">
+								  </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="poll-4" class="col-md-2">Poll 5</label>
+							<div class="col-md-10">
+								<select multiple class="form-control poll" data-poll="5" data-next="2">
+								  <option>1</option>
+								  <option>2</option>
+								  <option>3</option>
+								  <option>4</option>
+								  <option>5</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="poll-4" class="col-md-2">Poll 6</label>
+							<div class="col-md-10">
+								<div class="checkbox">
+								  <label>
+								    <input type="checkbox" value="" name="checkbox[]" class="poll" data-poll="6" data-next="3">
+								    Option one is this and that&mdash;be sure to include why it's great
+								  </label>
+								</div>
+								<div class="checkbox">
+								  <label>
+								    <input type="checkbox" value="" name="checkbox[]" class="poll" data-poll="6" data-next="2">
+								    Option one is this and that&mdash;be sure to include why it's great
+								  </label>
+								</div>
+								<div class="checkbox">
+								  <label>
+								    <input type="checkbox" value="" name="checkbox[]" class="poll" data-poll="6" data-next="5">
+								    Option one is this and that&mdash;be sure to include why it's great
+								  </label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+  	<script src="jquery.poll-validation.js"></script>
+  	<script type="text/javascript">
+  		$('.poll').poll();
+  	</script>
+</body>
+</html>
